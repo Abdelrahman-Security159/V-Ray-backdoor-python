@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>AzoraSEC</title>
+    <link rel="icon" href="image/AzoraICON.png">
+  	<link rel="stylesheet" href="css/bootstrap.min.css">
+  	<link rel="stylesheet" type="text/css" href="css/signup.css">
+  </head>
+  <body>
+                                            <!-- Nav Start-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark navfix">
+      <a class="navbar-brand" href="index.html"><img class="imgsize" src="image/AzoraICON.png"></a>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="signup.html">Sign up</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="signinusername.php">Sign in</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+                                          <!-- Nav End-->
+
+    <div class="signupsucc">
+      <form method="POST" action="signupCheckVerify.php">
+        <div style="position:absolute; left: 330px; top: 20px;">
+          <h1>Last step : </h1>
+        </div>
+        <div style="position:absolute; left: 20px; top: 100px;">
+          <h4 style="color: #005500; ">Write the verification code from your E-mail here to finish registration.</h4>
+        </div>
+        <div style="position: absolute; left: 320px; top: 220px;">
+          <input type="text" placeholder="here..." name="verifyInput" class="signupsuccinput" required>
+        </div>
+        <div style="position: absolute; left: 235px; top: 200px;">
+          <input type="submit" value="Check" name="submit" class="submit">
+        </div>
+      </form>
+    </div>
+
+    
+
+    <script type="text/javascript" src="js/jQuiry.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  </body>
+</html>

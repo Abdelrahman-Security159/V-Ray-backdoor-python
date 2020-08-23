@@ -1,0 +1,82 @@
+body{
+	background-color: #A0A0A0;
+}
+.title{
+	font-size: 100px;
+	padding-left: 50px;
+}
+.semi-title{
+	font-size: 30px;
+	padding-left: 50px;
+}
+.titlediv{
+	align-self: center;
+	padding-left: 375px;
+	position: absolute;
+	bottom: 300px;
+	left: -300px;
+}
+.imagetitle{
+	width: 400px;
+	position: absolute;
+	left: 900px;
+	top: 100px;
+	border-radius: 10px;
+}
+.hr1{
+	top: 430px;
+}
+.Skills{
+	position: absolute;
+	top: 550px;
+	left: 400px;
+	font-size: 20px;
+}
+.footer{
+	position: absolute;
+	left: 550px;
+	top: 1050px;
+	font-size: 30px;
+}
+.hr2{
+
+	top: 800px;
+}
+.hr3{
+	position: absolute;
+	top: 1000px;
+}
+.imgsize{
+	width: 30px;
+	cursor: pointer;
+	margin-left: 40px;
+	transition: transform 0.2s;
+}
+hr{
+	position: absolute;
+	width: 900px;
+	left: 200px;
+	border-style: dotted;
+	border-width: 2px;
+	border-color: #551111;
+}
+.contact{
+	position: absolute;
+	top: 850px;
+}
+.hr4{
+	top: 1000px;
+}
+.tableicon{
+	position: absolute;
+	left: 500px;
+	top: 70px;
+}
+.imgsize:hover{
+	transform: scale(1.1);
+}
+.navfix{
+	position: fixed;
+	width: 1350px;
+	z-index: 9;
+}

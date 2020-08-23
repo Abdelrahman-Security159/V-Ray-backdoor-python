@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>AzoraSEC</title>
+    <link rel="icon" href="image/AzoraICON.png">
+  	<link rel="stylesheet" href="css/bootstrap.min.css">
+  	<link rel="stylesheet" type="text/css" href="css/signup.css">
+  </head>
+  <body>
+                                            <!-- Nav Start-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark navfix">
+      <a class="navbar-brand" href="index.html"><img class="imgsize" src="image/AzoraICON.png"></a>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="signup.php">Sign up</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="signinusername.php">Sign in</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+                                          <!-- Nav End-->
+
+    <div class="signupdiv">
+      <form class="signupform" action="signupProcessing.php" method="POST">
+          <div class="">
+            <input class="inputclass" type="text" name="email" value="" placeholder="  E-mail" required>
+          </div>
+          <div style="position: absolute; top: 60px;">
+            <input class="inputclass" type="text" name="username" value="" placeholder="  Username" required>
+          </div>
+          <div style="position: absolute; top: 120px;">
+            <input class="inputclass" type="password" name="password" value="" placeholder="  Password" required>
+          </div>
+          <div style="position: absolute; top: 180px;">
+            <input class="inputclass" type="password" name="repassword" value="" placeholder="  Re-password" required>
+          </div>
+          <div style="position: absolute; top: 440px;">
+            <input class="submit" type="submit" name="submit" value="Sign up">
+          </div>
+          <div style="position: absolute; top: 240px;">
+            <input class="inputclass" type="text" name="rpg" id="gen" value="" placeholder="  Generate Password: " onclick="generate()">
+          </div>
+          <div style="position: absolute; top: 250px; left: 10px;">
+            <p class="check">Click then Shift + Ctrl + Left to mark all</p>
+          </div>
+          <div style="position: absolute; top: 300px; left: 10px;">
+            <p class="check"><strong>Decrypt this code : </strong> </p>
+            <br>
+            <div class="check" id="enc" style="position: absolute; top: 120px;" ></div>
+            <input type="hidden" name="encryptValue" id="hiddenInput"/>
+            
+          </div>
+          <div style="position: absolute; top: 400px;">
+            <input class="inputclass" type="text" name="decryptValue" placeholder="  Put Decryption here... " required>
+          </div>
+      </form>
+    </div>
+
+    <script type="text/javascript">
+    function generate() {
+      var value = '';
+      var generateValue = document.getElementById('gen');
+      for(var i = 0; i < 20; i++){
+        var rand = parseInt(((Math.random() * (123 - 48)) + 47));
+        if((rand >= 48 && rand <58) || (rand >= 65 && rand < 91) || (rand >= 97 && rand < 123))
+          value += String.fromCharCode(rand);
+      }
+      generateValue.value = value;
+    }
+
+    var array = new Array("NmbenTnzref va rirel jurer",
+    "Sla bz ylua zvtl nhtlz.",
+     "Ayf uva av jolha :).",
+     "VHJ5IGhhY2sgbXkgbWluZCA6KS4",
+     "RmFyY3J5IG9yIEFzc2Fzc2luJ3MgY3JlZWQ/",
+     "Onggyr svryq be Pnyy bs Qhgl?",
+     "Tnzref ner yrtraqf.",);
+
+        var num = Math.floor(Math.random() * 7);
+
+        console.log(num);
+
+        document.getElementById("enc").innerHTML = array[num];
+        document.getElementById("hiddenInput").innerHTML = array[num];
+
+        console.log(array[num]);
+
+    </script>
+
+    <script type="text/javascript" src="js/jQuiry.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  </body>
+</html>
